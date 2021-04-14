@@ -1,0 +1,18 @@
+1.進入cmd介面，輸入pip install pydub
+	a.理論上可以直接完成安裝
+	b.但cmd介面會告訴你需要ffmpeg來播放除了WAV之外的音訊種類的 "警告訊息" 。
+2.要撥放不同種類的音檔，需要用到PyAudio、ffmpeg這兩個模組(?)
+3.關於ffmpeg安裝
+	a.參考https://zh.wikihow.com/%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85FFmpeg%E7%A8%8B%E5%BA%8F
+	b.請注意一定要加入到PATH變數，隨意新增一個環境變數是沒用的
+	c.使用launchpad_input.py進行執行測試
+	d.如果程式依舊跳出警告訊息，請重新開機
+4.關於PyAudio安裝
+	a.完成上面的步驟後，應該只會有play這個函數(輸出用)無法執行的問題
+	b.請到cmd介面輸入 pip install PyAudio
+	c.如果順利安裝即可執行
+	d.如果沒有的話，應該是跳出需要安裝Microsoft Visual C++ 14.0的訊息
+	e.請到https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio這個網頁，ctrl+f 搜尋PyAudio-0.2.11-cp37-cp37m-win_amd64
+	f.下載這個whl檔
+	g.把cmd介面路徑改成whl檔的位置，並輸入pip install PyAudio-0.2.11-cp37-cp37m-win_amd64.whl
+	h.應該就可以順利執行拉~
